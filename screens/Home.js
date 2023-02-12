@@ -1,4 +1,4 @@
-import { StyleSheet, SafeAreaView, FlatList, Text, View } from "react-native";
+import { StyleSheet, SafeAreaView, FlatList, View } from "react-native";
 
 import { COLORS, NFTData } from "../constants";
 import { NFTCard, HomeHeader, FocusedStatusBar } from "../components";
@@ -15,6 +15,7 @@ const Home = () => {
             renderItem={({ item }) => <NFTCard data={item} />}
             keyExtractor={(item) => item.id}
             showsVerticalScrollIndicator={false}
+            ListHeaderComponent={<HomeHeader />}
           />
         </View>
 
