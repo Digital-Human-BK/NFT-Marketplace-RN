@@ -50,7 +50,7 @@ export const EthPrice = ({ price }) => {
           color: COLORS.primary,
         }}
       >
-        {price}
+        {price.toFixed(2)}
       </Text>
     </View>
   );

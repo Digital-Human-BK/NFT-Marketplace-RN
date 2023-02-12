@@ -27,7 +27,12 @@ export const CircleButton = ({ imgUrl, handlePress, ...rest }) => {
   );
 };
 
-export const RectangularButton = ({ minWidth, fontSize, handlePress }) => {
+export const RectangularButton = ({
+  minWidth,
+  fontSize,
+  handlePress,
+  ...rest
+}) => {
   return (
     <TouchableOpacity
       style={{
@@ -35,6 +40,7 @@ export const RectangularButton = ({ minWidth, fontSize, handlePress }) => {
         borderRadius: SIZES.extraLarge,
         minWidth: minWidth,
         padding: SIZES.small,
+        ...rest,
       }}
       onPress={handlePress}
     >
